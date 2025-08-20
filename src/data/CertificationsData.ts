@@ -57,7 +57,7 @@ export const certifications = [
       { type: "image", src: "/certifications/post2/certificate-sample.jpg" }
     ],
     issuer: "SENAI",
-    date: "2024",
+    date: "2025",
     credentialUrl: "https://example.com/certificate/protecao-dados",
     duration: "40 horas",
     location: "Online",

@@ -97,7 +97,7 @@ export function Footer() {
         <div className="border-t border-purple-800/30 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm">
-              © 2024 Nathalye Vitoria. Todos os direitos reservados.
+              ©2025 Nathalye Vitoria. Todos os direitos reservados.
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>Desenvolvido por</span>

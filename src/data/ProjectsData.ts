@@ -125,7 +125,7 @@ export const projects = [
       { type: "image", src: "/projects/post4/project-sample.jpg" },
       { type: "video", src: "/projects/post4/bat-vd.mp4" },
     ],
-    period: "2024",
+    period: "2025",
     location: "Oficina de Usinagem CNC",
     team: "Individual",
     technologies: ["Programação CNC", "Fresadora CNC", "Usinagem de Alumínio", "CAD/CAM", "Controle Numérico"],
