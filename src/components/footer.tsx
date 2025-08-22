@@ -78,14 +78,20 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/skills" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                <Link href="/certifications" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
                   <span className="w-1 h-1 bg-pink-400 rounded-full"></span>
+                  Certificações
+                </Link>
+              </li>
+              <li>
+                <Link href="/skills" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                  <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
                   Habilidades
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
+                  <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
                   Contato
                 </Link>
               </li>
