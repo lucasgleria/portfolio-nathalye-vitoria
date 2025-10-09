@@ -42,16 +42,14 @@ export const projects = [
     ✅ Aplicação prática de normas NR10 e NR12
     ✅Dispositivos de proteção 
     ✅Testes de isolação com megômetro`,
-    image: "/projects/post2/project-sample.jpg",
+    image: "/projects/post2/painel.jpeg",
     media: [
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "video", src: "/projects/post2/project-sample.jpg" },
+      { type: "image", src: "/projects/post2/painel.jpeg" },
+      { type: "image", src: "/projects/post2/painel1.jpeg" },
+      { type: "image", src: "/projects/post2/painel2.jpeg" },
+      { type: "image", src: "/projects/post2/painel3.jpeg" },
+      { type: "image", src: "/projects/post2/painel4.jpeg" },
+      { type: "video", src: "/projects/post2/painelv.mp4" },
     ],
     period: "2025",
     location: "SENAI - São Paulo",
