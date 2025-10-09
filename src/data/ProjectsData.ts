@@ -11,7 +11,7 @@ export const projects = [
       { type: "image", src: "/projects/post1/relogio3.jpeg" },
       { type: "video", src: "/projects/post1/relogio-vd.mp4" },
     ],
-    period: "2022 - 2023",
+    period: "2024 - 2025",
     location: "SENAI - São Paulo",
     team: "Individual",
     technologies: ["Eletrônica Digital", "Circuitos Lógicos", "Displays 7 Segmentos", "Contadores Digitais"],
@@ -35,7 +35,7 @@ export const projects = [
     name: "Painel de Comando com Partida Direta – Projeto em Máquinas Elétricas II (SENAI)",
     description: `Desenvolvido na disciplina de Máquinas Elétricas II (SENAI), este painel comanda a partida direta de um motor trifásico 220V, ligado em configuração triângulo. O sistema utiliza contatores, disjuntores, relés térmicos e fonte de alimentação, seguindo todas as normas de segurança elétrica.
     O projeto reforçou conceitos de comandos elétricos, integração eletromecânica e práticas de montagem profissional de painéis.
-    ✅ Motor trifásico 220V (ligação em triângulo)
+    ✅ Motor trifásico 220V (ligação em triângulo/delta)
     ✅ Partida direta
     ✅ Montagem em placa metálica com canaletas
     ✅ Fiação com identificadores e terminais
@@ -53,9 +53,9 @@ export const projects = [
       { type: "image", src: "/projects/post2/project-sample.jpg" },
       { type: "video", src: "/projects/post2/project-sample.jpg" },
     ],
-    period: "2023",
+    period: "2025",
     location: "SENAI - São Paulo",
-    team: "Equipe de 4 pessoas",
+    team: "Equipe de 2 pessoas",
     technologies: ["Comandos Elétricos", "Contatores", "Relés Térmicos", "Normas NR10/NR12", "Motor Trifásico"],
     github: "https://github.com/nathalye-vitoria/painel-comando",
     live: "",
@@ -94,7 +94,7 @@ export const projects = [
       { type: "image", src: "/projects/post3/project-sample.jpg" },
       { type: "image", src: "/projects/post3/project-sample.jpg" },
     ],
-    period: "2023",
+    period: "2025",
     location: "Laboratório de Eletrônica",
     team: "Individual",
     technologies: ["Eletrônica Analógica", "Reguladores de Tensão", "Retificação", "Filtragem", "CI 7805"],
