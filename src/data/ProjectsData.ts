@@ -4,14 +4,14 @@ export const projects = [
     name: "Relógio Digital – Projeto de Eletrônica Digital (SENAI)",
     description:
       "Este relógio digital foi desenvolvido como parte da disciplina de Eletrônica Digital no curso de Aprendizagem Industrial de Eletricista de Manutenção Eletroeletrônica do SENAI. O projeto teve como objetivo aplicar os conhecimentos teóricos na prática, utilizando circuitos lógicos, displays de 7 segmentos e contadores digitais para mostrar as horas de forma precisa. Com uma montagem funcional e visual limpa, o relógio demonstra o domínio de conceitos como temporização, decodificação e controle de sinais, sendo um exemplo prático de automação e eletrônica aplicada.",
-    image: "/projects/post1/project-sample.jpg",
+    image: "/projects/post1/relogio1.jpeg",
     media: [
-      { type: "image", src: "/projects/post1/project-sample.jpg" },
-      { type: "image", src: "/projects/post1/project-sample.jpg" },
-      { type: "image", src: "/projects/post1/project-sample.jpg" },
-      { type: "video", src: "/projects/post1/relogio-vd.mp4" },
+      { type: "image", src: "/projects/post1/relogio4.jpeg" },
+      { type: "image", src: "/projects/post1/relogio2.jpeg" },
+      { type: "image", src: "/projects/post1/relogio3.jpeg" },
+      { type: "video", src: "/projects/post1/relogiov.mp4" },
     ],
-    period: "2022 - 2023",
+    period: "2024 - 2025",
     location: "SENAI - São Paulo",
     team: "Individual",
     technologies: ["Eletrônica Digital", "Circuitos Lógicos", "Displays 7 Segmentos", "Contadores Digitais"],
@@ -35,27 +35,25 @@ export const projects = [
     name: "Painel de Comando com Partida Direta – Projeto em Máquinas Elétricas II (SENAI)",
     description: `Desenvolvido na disciplina de Máquinas Elétricas II (SENAI), este painel comanda a partida direta de um motor trifásico 220V, ligado em configuração triângulo. O sistema utiliza contatores, disjuntores, relés térmicos e fonte de alimentação, seguindo todas as normas de segurança elétrica.
     O projeto reforçou conceitos de comandos elétricos, integração eletromecânica e práticas de montagem profissional de painéis.
-    ✅ Motor trifásico 220V (ligação em triângulo)
-    ✅ Partida direta
-    ✅ Montagem em placa metálica com canaletas
-    ✅ Fiação com identificadores e terminais
-    ✅ Aplicação prática de normas NR10 e NR12
-    ✅Dispositivos de proteção 
-    ✅Testes de isolação com megômetro`,
-    image: "/projects/post2/project-sample.jpg",
+    - Motor trifásico 220V (ligação em triângulo/delta)
+    - Partida direta
+    - Montagem em placa metálica com canaletas
+    - Fiação com identificadores e terminais
+    - Aplicação prática de normas NR10 e NR12
+    - Dispositivos de proteção 
+    - Testes de isolação com megômetro`,
+    image: "/projects/post2/painel.jpeg",
     media: [
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "image", src: "/projects/post2/project-sample.jpg" },
-      { type: "video", src: "/projects/post2/project-sample.jpg" },
+      { type: "image", src: "/projects/post2/painel.jpeg" },
+      { type: "image", src: "/projects/post2/painel1.jpeg" },
+      { type: "image", src: "/projects/post2/painel2.jpeg" },
+      { type: "image", src: "/projects/post2/painel3.jpeg" },
+      { type: "image", src: "/projects/post2/painel4.jpeg" },
+      { type: "video", src: "/projects/post2/painelv.mp4" },
     ],
-    period: "2023",
+    period: "2025",
     location: "SENAI - São Paulo",
-    team: "Equipe de 4 pessoas",
+    team: "Equipe de 2 pessoas",
     technologies: ["Comandos Elétricos", "Contatores", "Relés Térmicos", "Normas NR10/NR12", "Motor Trifásico"],
     github: "https://github.com/nathalye-vitoria/painel-comando",
     live: "",
@@ -87,14 +85,14 @@ export const projects = [
     Filtragem com capacitor de 2200 µF
     Proteção térmica e contra curto-circuito
     Indicador visual de operação (LED)`,
-    image: "/projects/post3/project-sample.jpg",
+    image: "/projects/post3/fonte1.jpeg",
     media: [
-      { type: "image", src: "/projects/post3/project-sample.jpg" },
-      { type: "image", src: "/projects/post3/project-sample.jpg" },
-      { type: "image", src: "/projects/post3/project-sample.jpg" },
-      { type: "image", src: "/projects/post3/project-sample.jpg" },
+      { type: "image", src: "/projects/post3/fonte.jpeg" },
+      { type: "image", src: "/projects/post3/fonte1.jpeg" },
+      { type: "image", src: "/projects/post3/fonte2.jpeg" },
+      
     ],
-    period: "2023",
+    period: "2025",
     location: "Laboratório de Eletrônica",
     team: "Individual",
     technologies: ["Eletrônica Analógica", "Reguladores de Tensão", "Retificação", "Filtragem", "CI 7805"],
