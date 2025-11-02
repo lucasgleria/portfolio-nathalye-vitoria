@@ -1,10 +1,10 @@
 export const skillsData = [
   {
-    id: "maquinas_eletricas",
+    id: "maquinas_eletricas", // id da categoria
     title: "Máquinas Elétricas e Sistemas de Potência",
     skills: [
       {
-        id: "manutencao_motores",
+        id: "manutencao_motores", // id da habilidade
         title: "Manutenção de Motores Elétricos",
         description: "Experiência em diagnósticos, desmontagem, limpeza, troca de rolamentos, alinhamento e balanceamento de motores monofásicos e trifásicos, garantindo máxima eficiência e vida útil."
       },
