@@ -5,7 +5,7 @@ export const certifications = [
     description:
       `Certificação obtida após conclusão do curso de Eletrônica Básica no SENAI, abordando fundamentos de circuitos, componentes e montagem prática. O curso proporcionou uma base sólida em eletrônica analógica e digital, com ênfase em aplicações práticas e segurança.`,
     image: "/certifications/post1/certificate-sample.jpg",
-    media: [
+    media: [ // remover
       { type: "image", src: "/certifications/post1/certificate-sample.jpg" },
       { type: "image", src: "/certifications/post1/certificate-sample.jpg" }
     ],

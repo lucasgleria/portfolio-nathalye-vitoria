@@ -7,9 +7,9 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 dark:from-purple-950 dark:via-blue-950 dark:to-purple-950 text-white border-t border-purple-800/30">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
           {/* Brand Section */}
-          <div className="md:col-span-2">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex items-center gap-1">
                 <Cpu className="h-6 w-6 text-purple-400" />
@@ -17,16 +17,8 @@ export function Footer() {
                 <Wrench className="h-6 w-6 text-pink-400" />
               </div>
               <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Nathalye Vitoria
+                Nathalye Vitoria - Conecte-se comigo!
               </h3>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Estudante de Mecatrônica e Eletricista de Manutenção, apaixonada por automação, 
-              robótica e manutenção industrial. Transformando ideias em soluções tecnológicas.
-            </p>
-          </div>
-            <div className="mb-4">
-              <h4 className="text-lg font-semibold mb-3 text-purple-300">Conecte-se comigo</h4>
               <div className="flex gap-4">
                 <Link 
                   href="https://github.com/nathalyevitoria" 
@@ -60,42 +52,6 @@ export function Footer() {
                 </Link>
               </div>
             </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-300">Navegação Rápida</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                  Início
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
-                  Projetos
-                </Link>
-              </li>
-              <li>
-                <Link href="/certifications" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-pink-400 rounded-full"></span>
-                  Certificações
-                </Link>
-              </li>
-              <li>
-                <Link href="/skills" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                  Habilidades
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
-                  <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
-                  Contato
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
 
