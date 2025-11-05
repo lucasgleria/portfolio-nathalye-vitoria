@@ -368,10 +368,6 @@ Contribuições são bem-vindas! Siga estas etapas:
 - Documente funções complexas
 - Teste em diferentes dispositivos
 
-## 📜 Licença
-
-MIT License - Veja [LICENSE](LICENSE) para detalhes.
-
 ## 📞 Contato
 
 - **Desenvolvedor**: [Lucas Leria](https://github.com/lucasgleria)
