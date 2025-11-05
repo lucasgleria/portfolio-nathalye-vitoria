@@ -7,7 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import Link from "next/link"
 import { ArrowRight, Github, Linkedin, Mail, Cpu, Zap, Wrench, GraduationCap, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 
 export default function Home() {
   const educationData = [
@@ -37,17 +37,31 @@ export default function Home() {
       description: "Curso de qualificação adicional em manutenção eletroeletrônica, com foco em instalações industriais e sistemas de controle.",
       icon: <Zap className="h-5 w-5 text-blue-600" />,
       color: "pink"
-    }
+    },
   ]
 
+  const FIXED_CARD_WIDTH = 420 // largura fixa para todos os cards (px)
+  const CARD_GAP = 24 // gap entre cards em px (gap-6 => 1.5rem => 24px)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
   const [activeCard, setActiveCard] = useState<number | null>(null)
 
+  // layout responsivo para calcular padding e largura total da linha
+  const [layout, setLayout] = useState({ cardWidth: FIXED_CARD_WIDTH, padding: 16 })
+  useEffect(() => {
+    const handleResize = () => {
+      const padding = window.innerWidth >= 1024 ? 48 : window.innerWidth >= 768 ? 32 : 16 // lg:px-12 md:px-8 px-4
+      setLayout({ cardWidth: FIXED_CARD_WIDTH, padding })
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const scrollTimeline = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 400 // Width of one card + gap
+      const scrollAmount = layout.cardWidth + CARD_GAP // usa largura fixa + gap
       const currentScroll = scrollContainerRef.current.scrollLeft
       const newScroll = direction === 'left' ? currentScroll - scrollAmount : currentScroll + scrollAmount
       
@@ -65,6 +79,9 @@ export default function Home() {
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10) // 10px buffer
     }
   }
+
+  // calcula largura total da linha com base no número de itens
+  const totalLineWidth = educationData.length * layout.cardWidth + Math.max(0, educationData.length - 1) * CARD_GAP
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -140,48 +157,36 @@ export default function Home() {
             <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none"></div>
             
             {/* Right blur effect */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none"></div>
-            
-            {/* Scrollable area */}
-            <div 
-              ref={scrollContainerRef}
-              className="w-full pb-4 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-              onScroll={checkScrollPosition}
-            >
-              <div className="relative" style={{ width: `${educationData.length * 400}px` }}>
-                {/* Timeline line */}
-                <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-purple-200 via-blue-200 to-pink-200 dark:from-purple-800 dark:via-blue-800 dark:to-pink-800 rounded-full"></div>
-                
-                {/* Year markers positioned above cards */}
-                <div className="relative mb-8">
-                  <div className="flex justify-between px-40"> {/* Centered with card width consideration */}
-                    {educationData.map((edu) => (
-                      <div key={edu.id} className="flex flex-col items-center relative z-10">
+            <div className="relative">
+              <div 
+                ref={scrollContainerRef}
+                className="w-full pb-4 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                onScroll={checkScrollPosition}
+              >
+                <div className="relative flex flex-nowrap gap-6 px-4 md:px-8 lg:px-12">
+                  {/* Timeline line: posiciona e define largura baseada no nº de cards */}
+                  <div
+                    className="absolute top-8 h-1 bg-gradient-to-r from-purple-200 via-blue-200 to-pink-200 dark:from-purple-800 dark:via-blue-800 dark:to-pink-800 rounded-full"
+                    style={{ left: `${layout.padding}px`, width: `${totalLineWidth}px` }}
+                  ></div>
+                  {educationData.map((edu) => (
+                    <div key={edu.id} className="relative flex-none w-[420px] min-w-[420px] max-w-[420px]">
+                      {/* Year marker */}
+                      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
                         <div className="w-4 h-4 bg-white dark:bg-gray-900 border-4 border-purple-400 rounded-full shadow-lg"></div>
                         <div className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400 bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded">
                           {edu.year}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Education cards */}
-                <div className="flex gap-6 px-4">
-                  {educationData.map((edu) => {
-                    const colorClasses = {
-                      purple: "border-purple-200 hover:border-purple-300 dark:border-purple-800 dark:hover:border-purple-700",
-                      blue: "border-blue-200 hover:border-blue-300 dark:border-blue-800 dark:hover:border-blue-700",
-                      pink: "border-pink-200 hover:border-pink-300 dark:border-pink-800 dark:hover:border-pink-700"
-                    }
-                    
-                    return (
-                      <Card 
-                        key={edu.id} 
-                        className={`w-80 flex-shrink-0 hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${colorClasses[edu.color]}`}
-                      >
+                      
+                      {/* Education card */}
+                      <Card className={`mt-16 w-full h-[300px] min-h-[300px] flex flex-col justify-between overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${
+                        edu.color === 'purple' ? 'border-purple-200 hover:border-purple-300 dark:border-purple-800' :
+                        edu.color === 'blue' ? 'border-blue-200 hover:border-blue-300 dark:border-blue-800' :
+                        'border-pink-200 hover:border-pink-300 dark:border-pink-800'
+                      }`}>
                         <CardHeader>
-                          <CardTitle className="flex items-center gap-2">
+                          <CardTitle className="flex items-center gap-2 text-base md:text-lg lg:text-xl">
                             {edu.icon}
                             {edu.institution}
                           </CardTitle>
@@ -190,15 +195,15 @@ export default function Home() {
                             {edu.year}
                           </CardDescription>
                         </CardHeader>
-                        <CardContent>
-                          <h3 className="font-semibold mb-2 text-lg">{edu.course}</h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
+                        <CardContent className="flex-1">
+                          <h3 className="font-semibold mb-2 text-base md:text-lg">{edu.course}</h3>
+                          <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                             {edu.description}
                           </p>
                         </CardContent>
                       </Card>
-                    )
-                  })}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
